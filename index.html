@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>BEM</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+	<header class="caption">
+		<h1>BEM</h1>
+		<p>Центр Высоких Технологий.</p>
+	</header>
+	<section class="slide slide-1" id="cover">
+		<h2 class="shout shout_custom">PWA &mdash;<br>не только <br>клей!</h2>
+		<style>
+			.slide-1 {
+				background: #fff url(./pictures/anti-pwa.jpg) no-repeat;
+				background-size: contain;
+			}
+
+			.slide .shout_custom {
+				left: 50%;
+				font-size: 80px;
+				text-align: left;
+				width: auto;
+			}
+		</style>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Progressive <br>Web App</h2>
+	</section>
+	<section class="slide">
+		<h2>А зачем?</h2>
+		<ol>
+			<li class="next">Поднимаем конверсию</li>
+			<li class="next">Продвигаемся в поисковиках</li>
+			<li class="next">Повышаем удобство для пользователя</li>
+			<li class="next">И просто делаем крутые вещи, потому что мы можем!</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2>Ключевые особенности, должно быть:</h2>
+		<ol>
+			<li>Быстрым, адаптивным и прогрессивным</li>
+			<li>Надежным</li>
+			<li>Удерживающим</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2 class="center">Быстр, Адаптивен и прогрессивен</h2>
+		<img class="margin" src="pictures/css.gif" alt="">
+		<style>
+			.center {
+				text-align: center;
+			}
+
+			.margin {
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+			}
+		</style>
+	</section>
+	<section class="slide">
+		<h2>Что подразумеваем:</h2>
+		<ol>
+			<li>Адекватно работает на всех устройствах, начиная от утюга и заканчивая десктопом</li>
+			<li>Должно работать без JS</li>
+			<li>Не тормозит и не лагает, привет 60fps, пока jQuery-animation</li>
+			<li>Быстро грузится < 1000ms</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2>Надежным</h2>
+		<ul>
+			<li>Независимым от качества соединения</li>
+			<li>Безопасным - HTTPS (localhost)</li>
+			<li>Самообновляемым</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Удерживание пользователя</h2>
+		<ol>
+			<li>Возможность сохранения на домашний экран / рабочий стол</li>
+			<li>Используем Push-notification API</li>
+			<li>Доступным для поиска</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Web Manifest</h2>
+	</section>
+	<section class="slide">
+		<h2>Установка</h2>
+		<pre>
+			<code>&lt;link rel="manifest" href="/manifest.json"></code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Поля</h2>
+		<ul>
+			<li><mark>name</mark> - имя под иконкой</li>
+			<li><mark>short_name</mark> - короткое имя</li>
+			<li><mark>lang</mark> - на каком языке написаны параметры name и short_name</li>
+			<li><mark>dir</mark> - направление текста</li>
+			<li><mark>description</mark> - описание приложения</li>
+			<li><mark>icons</mark> - набор иконок разных размеров (src, sizes, type)</li>
+			<li><mark>background_color</mark> - цвет фона</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Поля</h2>
+		<ul>
+			<li><mark>display</mark> - тип окна приложения, с поисковой строкой или без (fullscreen, standalone, minimal-ui, browser)</li>
+			<li><mark>start_url</mark> - стратовый url для приложения при запуске через иконку</li>
+			<li><mark>prefer_related_applications</mark> - существует ли родственное приложение</li>
+			<li><mark>related_applications</mark> -массив родственных приложений</li>
+			<li><mark>scope</mark> - определяет область навигации, при уходе с которой переходим к нормальному виду страницы</li>
+			<li><mark>theme_color</mark> - цвет поисковой строки</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Манифест генераторы:</h2>
+		<ul>
+			<li><a href="//brucelawson.github.io/manifest">>brucelawson.github.io/manifest</a</li>
+			<li><a href="//favicon-generator.org/">favicon-generator.org</a></li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Service Workers</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Service Workers</h2>
+		<p>Представлят собой proxy-сервер между браузером и сервером, работает на стороне браузера, в фоновом режиме</p>
+		<p>Нет доступа к DOM. Работает в фоновом режиме.</p>
+	</section>
+
+	<section class="slide">
+			<h2 class="center">Схема работы Service Worker</h2>
+			<img style="max-width: 800px; width: 100%" src="pictures/offline-first-diagram.jpg" alt="схема работы Service Worker">
+	</section>
+
+	<section class="slide">
+		<h2>Подключение service-worker</h2>
+		<ul>
+			<li>Регистрация</li>
+			<li>Установка</li>
+			<li>Активация</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Регистрация</h2>
+		<pre><code>
+if ('serviceWorker' in navigator) {
+	navigator.serviceWorker
+		.register('./sw.js', { scope: './' })
+		.then(reg => console.log(reg));
+}
+		</code></pre>
+	</section>
+
+	<section class="slide">
+		<h2>Установка</h2>
+		<pre style="font-size: .8em"><code>
+const cacheName = 'sw-v1';
+const files = ['/index.html', '/css/styles.css', '/js/app.js'];
+
+self.addEventListener('install', (e) => {
+	e.waitUntil(cache
+		.open(cacheName)
+		.then( cache => cache.addAll(files))
+	);
+});
+		</code></pre>
+	</section>
+
+	<section class="slide">
+		<h2>Активация</h2>
+<pre style="font-size: .7em"><code>
+self.addEventListener('activate', e => e.waitUntil(
+	caches.keys().then(cacheNames =>
+		Promise.all(
+			cacheNames
+				.filter(cache => cache !== cacheName)
+				.map(cacheName => caches.delete(cacheName))
+		)
+	)
+));
+</code></pre>
+	</section>
+
+	<section class="slide">
+			<h2>События service workers</h2>
+			<ol>
+				<li>Fetch</li>
+				<li>Push</li>
+				<li>Sync</li>
+			</ol>
+	</section>
+
+	<section class="slide">
+		<h2>Стратегии Service Workers</h2>
+		<ol>
+			<li>Network First</li>
+			<li>Fastest</li>
+			<li>CacheOnly</li>
+			<li>NetworkOnly</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>А можно ли работать с SW еще проще?</h2>
+		<ul>
+			<li><a href="https://github.com/GoogleChromeLabs/sw-toolbox">sw-toolbox</a></li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>А чё там с поддержкой?</h2>
+		<img style="max-width: 100%" src="pictures/support.jpg" alt="поддержка service workers">
+	</section>
+
+	<section class="slide slide_lighthouse">
+		<style>
+			.slide_lighthouse {
+				background: white url(pictures/pwa-lighthouse.png) no-repeat;
+				background-size: 40%;
+				background-position: 90% 43%;
+			}
+		</style>
+		<h2>Lighthouse, тестируем:</h2>
+		<ul>
+			<li>Производительность</li>
+			<li>на PWA</li>
+			<li>Accessibility</li>
+			<li>Best practices</li>
+		</ul>
+		<p style="font-size: 0.9em" class="note">/* Можно использовать как расширение, для ручного тестирования, так и через npm команду в контексте CI */</p>
+	</section>
+
+	<section class="slide">
+		<h2>Чё почитать?</h2>
+		<ul>
+			<li><a href="//developer.mozilla.org/ru/docs/Web/API/Service_Worker_API">developer.mozilla.org/ru/docs/Web/API/Service_Worker_API</a></li>
+			<li><a href="//developers.google.com/web/progressive-web-apps/">developers.google.com/web/progressive-web-apps</a></li>
+			<li><a href="//w3c.github.io/ServiceWorker/">w3c Service Workers</a></li>
+			<li><a href="//pwa.rocks">pwa.rocks</a></li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Вопросы?</h2>
+	</section>
+	<div class="progress"></div>
+	<script src="node_modules/shower-core/shower.min.js"></script>
+</body>
+</html>
